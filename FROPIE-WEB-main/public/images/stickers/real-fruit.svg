@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="%100 sticker">
+<title>%100 sticker</title>
+
+<circle cx="100" cy="100" r="88" fill="#5FC66B" stroke="#1B1512" stroke-width="7"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#FFF9E8" stroke-width="4" stroke-dasharray="6 9"/>
+<text x="100" y="94" text-anchor="middle" font-family="Fredoka, Arial, sans-serif" font-weight="700" font-size="30" fill="#1B1512">%100</text>
+<text x="100" y="124" text-anchor="middle" font-family="Fredoka, Arial, sans-serif" font-weight="600" font-size="14" fill="#1B1512" opacity="0.8">GERÇEK MEYVE</text>
+
+</svg>

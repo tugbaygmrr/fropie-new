@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" role="img" aria-label="yaban mersini illüstrasyonu">
+<title>yaban mersini illüstrasyonu</title>
+<g transform="translate(60 66)">
+  <!-- arka küçük tane -->
+  <circle cx="27" cy="12" r="19" fill="#3F5E96" stroke="#1B1512" stroke-width="3.5"/>
+  <g transform="translate(27 -5) scale(0.7)" fill="#20345A" stroke="#1B1512" stroke-width="3" stroke-linejoin="round">
+    <path d="M0,-8 L2.4,-1 L9,-1 L3.6,3 L5.6,10 L0,5.6 L-5.6,10 L-3.6,3 L-9,-1 L-2.4,-1 Z"/>
+  </g>
+  <!-- ana tane -->
+  <circle cx="-8" cy="0" r="30" fill="#4E74B8" stroke="#1B1512" stroke-width="4"/>
+  <path d="M-22,-10 C-27,1 -22,15 -12,22" fill="none" stroke="#B7CCEC" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+  <!-- taç (calyx) -->
+  <g transform="translate(-8 -22)">
+    <path d="M0,-9 L2.6,-1 L10,-1 L4,3.4 L6.2,11 L0,6.2 L-6.2,11 L-4,3.4 L-10,-1 L-2.6,-1 Z" fill="#2C4472" stroke="#1B1512" stroke-width="2.6" stroke-linejoin="round"/>
+    <circle cx="0" cy="1" r="2.6" fill="#1B1512"/>
+  </g>
+</g>
+</svg>

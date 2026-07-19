@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" role="img" aria-label="pineapple-piece illüstrasyonu">
+<title>pineapple-piece illüstrasyonu</title>
+<g transform="translate(60 66) rotate(-6) scale(1.15)">
+  <path d="M-20,-4 C-30,-40 30,-40 20,-4 L14,30 C10,42 -10,42 -14,30 Z" fill="#FFC23C" stroke="#1B1512" stroke-width="3.5"/>
+  <g stroke="#C77E12" stroke-width="2.2" opacity="0.8">
+    <path d="M-18,2 L18,2"/><path d="M-16,14 L16,14"/><path d="M-14,26 L14,26"/>
+    <path d="M-8,-30 L2,36"/><path d="M8,-30 L-2,36"/>
+  </g>
+  <path d="M0,-52 C10,-44 12,-30 4,-24 C0,-34 -2,-40 0,-52 Z" fill="#5FC66B" stroke="#1B1512" stroke-width="2.6"/>
+  <path d="M0,-50 C-10,-44 -12,-30 -4,-24 C0,-34 2,-40 0,-50 Z" fill="#4FB55C" stroke="#1B1512" stroke-width="2.6"/>
+  <path d="M-2,-46 C-4,-34 -4,-28 0,-24 C4,-28 4,-34 2,-46 Z" fill="#6FD37b" stroke="#1B1512" stroke-width="2.4"/>
+</g>
+</svg>

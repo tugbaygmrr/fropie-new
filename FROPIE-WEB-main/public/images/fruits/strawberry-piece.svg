@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" role="img" aria-label="strawberry-piece illüstrasyonu">
+<title>strawberry-piece illüstrasyonu</title>
+<g transform="translate(60 62) rotate(-6) scale(1.4)">
+  <path d="M0,-30 C22,-30 34,-14 30,6 C26,26 12,40 0,40 C-12,40 -26,26 -30,6 C-34,-14 -22,-30 0,-30 Z" fill="#FF4D3D" stroke="#1B1512" stroke-width="3.5"/>
+  <path d="M-16,-30 C-10,-40 10,-40 16,-30 C10,-24 6,-22 0,-22 C-6,-22 -10,-24 -16,-30 Z" fill="#5FC66B" stroke="#1B1512" stroke-width="3"/>
+  <path d="M0,-40 L0,-28" stroke="#3B7d3f" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="-14" cy="-8" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(0 -14 -8)"/><ellipse cx="4" cy="-12" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(24 4 -12)"/><ellipse cx="-4" cy="4" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(48 -4 4)"/><ellipse cx="14" cy="-2" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(72 14 -2)"/><ellipse cx="-16" cy="12" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(96 -16 12)"/><ellipse cx="8" cy="8" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(120 8 8)"/><ellipse cx="0" cy="20" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(144 0 20)"/><ellipse cx="-8" cy="-20" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(168 -8 -20)"/>
+</g>
+</svg>

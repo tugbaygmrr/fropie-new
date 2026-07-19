@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="ÇITIR sticker">
+<title>ÇITIR sticker</title>
+
+<circle cx="100" cy="100" r="88" fill="#FFD23F" stroke="#1B1512" stroke-width="7"/>
+<circle cx="100" cy="100" r="72" fill="none" stroke="#FF4D3D" stroke-width="4" stroke-dasharray="6 9"/>
+<text x="100" y="94" text-anchor="middle" font-family="Fredoka, Arial, sans-serif" font-weight="700" font-size="30" fill="#1B1512">ÇITIR</text>
+<text x="100" y="124" text-anchor="middle" font-family="Fredoka, Arial, sans-serif" font-weight="600" font-size="14" fill="#1B1512" opacity="0.8">CRUNCH MODE</text>
+
+</svg>

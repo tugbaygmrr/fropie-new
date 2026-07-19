@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 460" role="img" aria-label="Ananas — DOKURU dondurularak kurutulmuş meyve paketi">
+<title>Ananas — DOKURU dondurularak kurutulmuş meyve paketi</title>
+
+<rect x="72" y="46" width="216" height="368" rx="30" fill="#1B1512" opacity="0.16"/>
+<rect x="60" y="40" width="216" height="368" rx="28" fill="#FFC23C" stroke="#1B1512" stroke-width="6"/>
+<path d="M60,44 L70,35 L80,44 L90,35 L100,44 L110,35 L120,44 L130,35 L140,44 L150,35 L160,44 L170,35 L180,44 L190,35 L200,44 L210,35 L220,44 L230,35 L240,44 L250,35 L260,44 L270,35 L280,44 L290,35 L300,44 L310,35 L320,44 Z" fill="#FFC23C" stroke="#1B1512" stroke-width="4" stroke-linejoin="round"/>
+<path d="M60,414 L70,405 L80,414 L90,405 L100,414 L110,405 L120,414 L130,405 L140,414 L150,405 L160,414 L170,405 L180,414 L190,405 L200,414 L210,405 L220,414 L230,405 L240,414 L250,405 L260,414 L270,405 L280,414 L290,405 L300,414 L310,405 L320,414 Z" fill="#FFC23C" stroke="#1B1512" stroke-width="4" stroke-linejoin="round"/>
+<rect x="150" y="26" width="12" height="22" rx="4" fill="#FFC23C" stroke="#1B1512" stroke-width="3"/>
+<!-- üst logo -->
+<g transform="translate(168 96) rotate(-3)">
+  <text x="0" y="0" text-anchor="middle" font-family="Fredoka, Arial, sans-serif" font-weight="700" font-size="42" fill="#FFF4DA" stroke="#1B1512" stroke-width="5" paint-order="stroke" letter-spacing="1">DOKURU!</text>
+  <text x="0" y="26" text-anchor="middle" font-family="Fredoka, Arial, sans-serif" font-weight="600" font-size="13" fill="#1B1512" letter-spacing="3">ÇITIR MEYVE</text>
+</g>
+<!-- pencere -->
+<rect x="92" y="150" width="152" height="150" rx="26" fill="#FFF9E8" stroke="#1B1512" stroke-width="5"/>
+<clipPath id="win"><rect x="92" y="150" width="152" height="150" rx="26"/></clipPath>
+<g clip-path="url(#win)">
+  <g transform="translate(160 220) rotate(-6) scale(1.1)">
+  <path d="M-20,-4 C-30,-40 30,-40 20,-4 L14,30 C10,42 -10,42 -14,30 Z" fill="#FFC23C" stroke="#1B1512" stroke-width="3.5"/>
+  <g stroke="#C77E12" stroke-width="2.2" opacity="0.8">
+    <path d="M-18,2 L18,2"/><path d="M-16,14 L16,14"/><path d="M-14,26 L14,26"/>
+    <path d="M-8,-30 L2,36"/><path d="M8,-30 L-2,36"/>
+  </g>
+  <path d="M0,-52 C10,-44 12,-30 4,-24 C0,-34 -2,-40 0,-52 Z" fill="#5FC66B" stroke="#1B1512" stroke-width="2.6"/>
+  <path d="M0,-50 C-10,-44 -12,-30 -4,-24 C0,-34 2,-40 0,-50 Z" fill="#4FB55C" stroke="#1B1512" stroke-width="2.6"/>
+  <path d="M-2,-46 C-4,-34 -4,-28 0,-24 C4,-28 4,-34 2,-46 Z" fill="#6FD37b" stroke="#1B1512" stroke-width="2.4"/>
+</g><g transform="translate(212 250) rotate(12) scale(0.6)">
+  <path d="M-20,-4 C-30,-40 30,-40 20,-4 L14,30 C10,42 -10,42 -14,30 Z" fill="#FFC23C" stroke="#1B1512" stroke-width="3.5"/>
+  <g stroke="#C77E12" stroke-width="2.2" opacity="0.8">
+    <path d="M-18,2 L18,2"/><path d="M-16,14 L16,14"/><path d="M-14,26 L14,26"/>
+    <path d="M-8,-30 L2,36"/><path d="M8,-30 L-2,36"/>
+  </g>
+  <path d="M0,-52 C10,-44 12,-30 4,-24 C0,-34 -2,-40 0,-52 Z" fill="#5FC66B" stroke="#1B1512" stroke-width="2.6"/>
+  <path d="M0,-50 C-10,-44 -12,-30 -4,-24 C0,-34 2,-40 0,-50 Z" fill="#4FB55C" stroke="#1B1512" stroke-width="2.6"/>
+  <path d="M-2,-46 C-4,-34 -4,-28 0,-24 C4,-28 4,-34 2,-46 Z" fill="#6FD37b" stroke="#1B1512" stroke-width="2.4"/>
+</g>
+</g>
+<!-- lezzet şeridi -->
+<g transform="translate(168 344) rotate(-2)">
+  <rect x="-92" y="-26" width="184" height="52" rx="18" fill="#5FC66B" stroke="#1B1512" stroke-width="5"/>
+  <text x="0" y="7" text-anchor="middle" font-family="Fredoka, Arial, sans-serif" font-weight="700" font-size="26" fill="#1B1512">ANANAS</text>
+</g>
+<text x="168" y="392" text-anchor="middle" font-family="Fredoka, Arial, sans-serif" font-weight="600" font-size="15" fill="#1B1512" opacity="0.75">Tropik Mod</text>
+<!-- çıtır rozeti -->
+<g transform="translate(276 128) rotate(12)">
+  <path d="M0,-30 L8,-10 L30,-14 L14,2 L26,22 L2,14 L-14,30 L-12,6 L-32,-2 L-12,-8 Z" fill="#FFD23F" stroke="#1B1512" stroke-width="4" stroke-linejoin="round"/>
+  <text x="0" y="6" text-anchor="middle" font-family="Fredoka, Arial, sans-serif" font-weight="700" font-size="13" fill="#1B1512">ÇITIR</text>
+</g>
+
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 460" role="img" aria-label="Çilek — DOKURU dondurularak kurutulmuş meyve paketi">
+<title>Çilek — DOKURU dondurularak kurutulmuş meyve paketi</title>
+
+<rect x="72" y="46" width="216" height="368" rx="30" fill="#1B1512" opacity="0.16"/>
+<rect x="60" y="40" width="216" height="368" rx="28" fill="#FF6E8E" stroke="#1B1512" stroke-width="6"/>
+<path d="M60,44 L70,35 L80,44 L90,35 L100,44 L110,35 L120,44 L130,35 L140,44 L150,35 L160,44 L170,35 L180,44 L190,35 L200,44 L210,35 L220,44 L230,35 L240,44 L250,35 L260,44 L270,35 L280,44 L290,35 L300,44 L310,35 L320,44 Z" fill="#FF6E8E" stroke="#1B1512" stroke-width="4" stroke-linejoin="round"/>
+<path d="M60,414 L70,405 L80,414 L90,405 L100,414 L110,405 L120,414 L130,405 L140,414 L150,405 L160,414 L170,405 L180,414 L190,405 L200,414 L210,405 L220,414 L230,405 L240,414 L250,405 L260,414 L270,405 L280,414 L290,405 L300,414 L310,405 L320,414 Z" fill="#FF6E8E" stroke="#1B1512" stroke-width="4" stroke-linejoin="round"/>
+<rect x="150" y="26" width="12" height="22" rx="4" fill="#FF6E8E" stroke="#1B1512" stroke-width="3"/>
+<!-- üst logo -->
+<g transform="translate(168 96) rotate(-3)">
+  <text x="0" y="0" text-anchor="middle" font-family="Fredoka, Arial, sans-serif" font-weight="700" font-size="42" fill="#FFF4DA" stroke="#1B1512" stroke-width="5" paint-order="stroke" letter-spacing="1">DOKURU!</text>
+  <text x="0" y="26" text-anchor="middle" font-family="Fredoka, Arial, sans-serif" font-weight="600" font-size="13" fill="#1B1512" letter-spacing="3">ÇITIR MEYVE</text>
+</g>
+<!-- pencere -->
+<rect x="92" y="150" width="152" height="150" rx="26" fill="#FFF9E8" stroke="#1B1512" stroke-width="5"/>
+<clipPath id="win"><rect x="92" y="150" width="152" height="150" rx="26"/></clipPath>
+<g clip-path="url(#win)">
+  <g transform="translate(150 210) rotate(-8) scale(1.15)">
+  <path d="M0,-30 C22,-30 34,-14 30,6 C26,26 12,40 0,40 C-12,40 -26,26 -30,6 C-34,-14 -22,-30 0,-30 Z" fill="#FF4D3D" stroke="#1B1512" stroke-width="3.5"/>
+  <path d="M-16,-30 C-10,-40 10,-40 16,-30 C10,-24 6,-22 0,-22 C-6,-22 -10,-24 -16,-30 Z" fill="#5FC66B" stroke="#1B1512" stroke-width="3"/>
+  <path d="M0,-40 L0,-28" stroke="#3B7d3f" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="-14" cy="-8" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(0 -14 -8)"/><ellipse cx="4" cy="-12" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(24 4 -12)"/><ellipse cx="-4" cy="4" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(48 -4 4)"/><ellipse cx="14" cy="-2" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(72 14 -2)"/><ellipse cx="-16" cy="12" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(96 -16 12)"/><ellipse cx="8" cy="8" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(120 8 8)"/><ellipse cx="0" cy="20" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(144 0 20)"/><ellipse cx="-8" cy="-20" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(168 -8 -20)"/>
+</g><g transform="translate(210 250) rotate(16) scale(0.75)">
+  <path d="M0,-30 C22,-30 34,-14 30,6 C26,26 12,40 0,40 C-12,40 -26,26 -30,6 C-34,-14 -22,-30 0,-30 Z" fill="#FF4D3D" stroke="#1B1512" stroke-width="3.5"/>
+  <path d="M-16,-30 C-10,-40 10,-40 16,-30 C10,-24 6,-22 0,-22 C-6,-22 -10,-24 -16,-30 Z" fill="#5FC66B" stroke="#1B1512" stroke-width="3"/>
+  <path d="M0,-40 L0,-28" stroke="#3B7d3f" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="-14" cy="-8" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(0 -14 -8)"/><ellipse cx="4" cy="-12" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(24 4 -12)"/><ellipse cx="-4" cy="4" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(48 -4 4)"/><ellipse cx="14" cy="-2" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(72 14 -2)"/><ellipse cx="-16" cy="12" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(96 -16 12)"/><ellipse cx="8" cy="8" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(120 8 8)"/><ellipse cx="0" cy="20" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(144 0 20)"/><ellipse cx="-8" cy="-20" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(168 -8 -20)"/>
+</g><g transform="translate(190 190) rotate(30) scale(0.55)">
+  <path d="M0,-30 C22,-30 34,-14 30,6 C26,26 12,40 0,40 C-12,40 -26,26 -30,6 C-34,-14 -22,-30 0,-30 Z" fill="#FF4D3D" stroke="#1B1512" stroke-width="3.5"/>
+  <path d="M-16,-30 C-10,-40 10,-40 16,-30 C10,-24 6,-22 0,-22 C-6,-22 -10,-24 -16,-30 Z" fill="#5FC66B" stroke="#1B1512" stroke-width="3"/>
+  <path d="M0,-40 L0,-28" stroke="#3B7d3f" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="-14" cy="-8" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(0 -14 -8)"/><ellipse cx="4" cy="-12" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(24 4 -12)"/><ellipse cx="-4" cy="4" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(48 -4 4)"/><ellipse cx="14" cy="-2" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(72 14 -2)"/><ellipse cx="-16" cy="12" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(96 -16 12)"/><ellipse cx="8" cy="8" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(120 8 8)"/><ellipse cx="0" cy="20" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(144 0 20)"/><ellipse cx="-8" cy="-20" rx="2.4" ry="3.6" fill="#FFE9A8" stroke="#1B1512" stroke-width="1" transform="rotate(168 -8 -20)"/>
+</g>
+</g>
+<!-- lezzet şeridi -->
+<g transform="translate(168 344) rotate(-2)">
+  <rect x="-92" y="-26" width="184" height="52" rx="18" fill="#FFD23F" stroke="#1B1512" stroke-width="5"/>
+  <text x="0" y="7" text-anchor="middle" font-family="Fredoka, Arial, sans-serif" font-weight="700" font-size="26" fill="#1B1512">ÇILEK</text>
+</g>
+<text x="168" y="392" text-anchor="middle" font-family="Fredoka, Arial, sans-serif" font-weight="600" font-size="15" fill="#1B1512" opacity="0.75">Tatlı Mod</text>
+<!-- çıtır rozeti -->
+<g transform="translate(276 128) rotate(12)">
+  <path d="M0,-30 L8,-10 L30,-14 L14,2 L26,22 L2,14 L-14,30 L-12,6 L-32,-2 L-12,-8 Z" fill="#FFD23F" stroke="#1B1512" stroke-width="4" stroke-linejoin="round"/>
+  <text x="0" y="6" text-anchor="middle" font-family="Fredoka, Arial, sans-serif" font-weight="700" font-size="13" fill="#1B1512">ÇITIR</text>
+</g>
+
+</svg>

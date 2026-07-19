@@ -1,0 +1,374 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-ink font-body antialiased;
+    background: #fbf1f1;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: #e8a8b8;
+    color: #302824;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+
+  /* Odak görünürlüğü — erişilebilirlik */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible {
+    outline: 3px solid #1b1512;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Sayfanın her yerinde tekrar eden kalın konturlu kart */
+  .card-chunk {
+    @apply rounded-[28px] border border-ink/10 bg-white;
+  }
+
+  /* Grain / noise dokusu — bölümlerin üstüne ince kaplama */
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--grain);
+    background-size: 140px 140px;
+    opacity: 0.06;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    z-index: 0;
+  }
+
+  /* Sticker etiketi */
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-ink/10 px-4 py-1.5 font-display font-semibold shadow-sticker;
+  }
+
+  .btn-ink {
+    @apply inline-flex items-center gap-2 rounded-full border-[3px] border-ink bg-ink px-7 py-3.5 font-display text-lg font-semibold text-cream shadow-pop-sunny transition-all duration-200;
+  }
+
+  .btn-ink:hover {
+    @apply -translate-y-1;
+    box-shadow: 8px 10px 0 0 #ffd23f;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-full border-[3px] border-ink bg-white px-7 py-3.5 font-display text-lg font-semibold text-ink shadow-sticker transition-all duration-200;
+  }
+
+  .btn-ghost:hover {
+    @apply -translate-y-1 shadow-pop;
+  }
+
+  .section-title {
+    font-family: var(--font-heading), var(--font-display), sans-serif;
+    @apply text-4xl font-bold leading-[1.08] sm:text-5xl md:text-6xl;
+  }
+
+  /* Yatay kaydırma şeridi için gizli scrollbar */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Kesintisiz marquee (Tailwind animasyonuyla birlikte) */
+.marquee-track {
+  display: inline-flex;
+  min-width: 200%;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+/* prefers-reduced-motion: hareketi sadeleştir */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .marquee-track {
+    min-width: 100%;
+  }
+}
+
+/* Fropie Figma landing — 1440×4096 source canvas */
+html, body { margin: 0; padding: 0; background: #fff9ee; }
+/* Tuval her genişlikte ekranı tam doldurur: kutu genişliği %100, yüksekliği
+   aspect-ratio ile kilitli. --f-scale layout.tsx'teki script tarafından
+   (clientWidth / 1440) olarak set edilir; kaydırma çubuğu hesaba katılır. */
+.fropie-viewport { width: 100%; aspect-ratio: 1440 / 4650; overflow: hidden; }
+.fropie-canvas { position: relative; width: 1440px; height: 4650px; overflow: hidden; transform: scale(var(--f-scale, 1)); transform-origin: top left; background: #fff9ee; color: #173b29; font-family: var(--font-poppins), sans-serif; }
+.fropie-canvas * { box-sizing: border-box; }
+/* Tüm başlıklar BalooBhai; geri kalan her şey Poppins (canvas'tan miras).
+   h3 de buraya dahil — aksi halde Tailwind base'inden Fredoka'yı alıyor. */
+.fropie-canvas h1,.fropie-canvas h2,.fropie-canvas h3 { margin: 0; font-family: var(--font-heading), sans-serif; font-weight: 400; line-height: 1.02; }
+.fropie-canvas h1,.fropie-canvas h2 { line-height: 1.02; }
+.fropie-canvas h3 { line-height: 1.15; }
+.fropie-canvas p { margin: 0; }
+.f-header { position:absolute; z-index:20; left:48px; top:28px; width:1344px; height:76px; border-radius:22px; background:#fff; display:flex; align-items:center; }
+.f-logo { margin-left:34px; color:#173b29; font:700 31px var(--font-poppins), sans-serif; text-decoration:none; }
+.f-header nav { position:absolute; left:408px; top:0; height:76px; display:flex; align-items:center; gap:62px; }
+.f-header nav a { min-width:90px; color:#173b29; font:400 13px var(--font-poppins), sans-serif; text-decoration:none; text-align:center; white-space:nowrap; }
+.f-cart { position:absolute; right:48px; top:13px; width:166px; height:52px; border:0; border-radius:26px; background:#173b29; color:white; font:700 13px var(--font-poppins), sans-serif; }
+.f-hero { position:absolute; left:48px; top:126px; width:1344px; height:543px; border-radius:42px; background:#1b407d; color:#fff9ee; padding:78px 72px; z-index:1; }
+.f-hero h1 { font-size:80px; }
+.f-hero>p { width:469px; margin:22px 0 66px 5px; font-size:20px; line-height:1.25; }
+.f-hero-actions { display:flex; gap:15px; margin-left:5px; }
+.f-hero-actions a,.f-bundle button { height:52px; padding:0 32px; border-radius:26px; display:flex; align-items:center; justify-content:center; color:#173b29; background:#d6ff46; font-size:18px; font-weight:700; text-decoration:none; }
+.f-hero-actions a+ a { background:#fff9ee; border:1px solid #d6ff46; }
+.f-circle,.f-layer { position:absolute; pointer-events:none; }
+
+/* Arka plan kıvrım deseni. z-index 0: tuval zemininin üstünde ama tüm
+   içeriğin altında — hero (z1), bundle (z4), görsel katmanlar (z8/9) hepsi
+   üstte kalıyor. Sadece krem alanlara denk gelecek şekilde konumlandırıldı;
+   boyut/açı/aynalama her birinde farklı ki tekrar eden damga gibi durmasın. */
+/* Desen görseli maske olarak kullanılıyor (alfa kanalı), rengi
+   background-color veriyor — böylece ton tek yerden ayarlanabiliyor.
+   Kaynak 1298x1212 olduğu için aspect-ratio ondan geliyor. */
+.f-squiggle {
+  position:absolute; z-index:0; pointer-events:none;
+  aspect-ratio:1298/1212;
+  background-color:#f6e7cf;
+  -webkit-mask-image:url("/images/fropie/squiggle.webp");
+          mask-image:url("/images/fropie/squiggle.webp");
+  -webkit-mask-size:contain; mask-size:contain;
+  -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+}
+.f-sq1 { left:-140px; top:620px;  width:640px; transform:rotate(-8deg) }
+.f-sq2 { left:960px;  top:1150px; width:560px; transform:rotate(13deg) scaleX(-1) }
+.f-sq3 { left:-90px;  top:1980px; width:520px; transform:rotate(-19deg) }
+.f-sq4 { left:980px;  top:2680px; width:580px; transform:rotate(7deg) scaleX(-1) }
+.f-sq5 { left:40px;   top:4110px; width:620px; transform:rotate(-5deg) }
+.f-hero-circle { z-index:2; left:792px; top:192px; width:540px; height:540px; }
+/* Hero sahnesi — iki PNG katmanı. İkisi de kaynakta aynı 1024x1536 tuvalde
+   olduğu için aynı kutuya oturuyor ve birebir hizalanıyorlar:
+     hero-hand.png    = el + kâse + dökülen çerezler ("el sadece")
+     hero-package.png = paket + alt el ("paket sadece")
+   perspective sahnede; katmanların giriş transform'u JS'ten (kaydırmaya
+   bağlı), yerleşme sonrası salınım içteki <img>'de — ayrı katmanda
+   olmasalar iki transform birbirini ezer. */
+.f-hero-stage { position:absolute; inset:0; z-index:9; perspective:1200px; perspective-origin:68% 28%; pointer-events:none }
+.f-hero-hand, .f-hero-package { position:absolute; left:700px; top:25px; width:758px; height:1137px; opacity:0; will-change:transform,opacity }
+.f-hero-hand { z-index:1; transform-origin:70% 0% }
+/* Paket elin üstünde: çerezler poşetin ağzında kaybolsun. */
+.f-hero-package { z-index:2; transform-origin:50% 100% }
+.f-hero-hand img, .f-hero-package img { display:block; width:100%; height:100%; object-fit:fill; filter:drop-shadow(0 6px 10px rgb(0 0 0 / .13)) }
+
+/* Yerine oturduktan sonra ince salınım — tamamen durursa fotoğraf gibi donuyor.
+   Paket ters fazda ve daha yavaş, ikisi senkron sallanmasın. */
+.f-hero-hand.settled img { animation:f-hand-float 4.2s ease-in-out infinite }
+.f-hero-package.settled img { animation:f-pack-float 5.6s ease-in-out infinite }
+@keyframes f-hand-float{ 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-6px) rotate(.55deg)} }
+@keyframes f-pack-float{ 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(7px) rotate(-.6deg)} }
+
+@media (prefers-reduced-motion: reduce){
+  .f-hero-hand.settled img, .f-hero-package.settled img { animation:none }
+}
+.f-badges { position:absolute; z-index:10; top:741px; left:108px; display:flex; gap:10px; align-items:center; }
+.f-pill { min-width:105px; height:42px; border-radius:18px; padding:11px 17px; text-align:center; font-size:13px; font-weight:700; }
+/* Duruş açıları değişkende: giriş animasyonu da hover da aynı değere dönsün. */
+.f-pill{--r:0deg;transform:rotate(var(--r))}
+.f-pill:nth-child(1){--r:8deg} .f-pill:nth-child(2){--r:-6deg} .f-pill:nth-child(3){--r:6deg}
+.f-pill.lime{background:#d6ff46}.f-pill.yellow{background:#ffd84a}.f-pill.pink{background:#ff7192}
+.f-about { position:absolute; left:110px; top:845px; width:1200px; }
+.f-about>h2 { font-size:42px; line-height:1.26; }.f-about>p { width:500px; margin:14px 0 0 2px; font-size:20px; line-height:1.2; }
+.f-values { display:flex; gap:32px; margin-top:83px; align-items:stretch; }.f-values article { position:relative; width:370px; min-height:215px; border-radius:30px; padding:31px; }.f-values article{--r:0deg;transform:rotate(var(--r))}.f-values article:nth-child(1){background:#d6ff46;--r:-5deg}.f-values article:nth-child(2){background:#ffd84a;--r:2.5deg}.f-values article:nth-child(3){background:#ff7192;--r:-7.35deg}
+.f-values b { font:700 28px var(--font-poppins), sans-serif; color:#15804c; }.f-values article:nth-child(2) b{color:#ff8a3d}.f-values article:nth-child(3) b{color:#173b29}.f-values h3{margin-top:6px;font-size:22px}.f-values p{width:290px;margin-top:5px;font-size:15px;line-height:1.28}
+/* z-index 10: ürün kartları .f-middle-layer'ın (z-8) kol görselinin üstünde
+   kalsın — aksi halde 3. kartın başlığı görselin altında kayboluyor. */
+.f-products { position:absolute; left:110px; top:1405px; width:1190px; z-index:10; }.f-products>h2{font-size:55px}.f-products>p{margin:15px 0 50px 2px;font-size:20px}.f-product-grid{display:grid;grid-template-columns:repeat(3,370px);gap:40px}.f-product-grid article{position:relative;height:472px;border-radius:30px;background:#fff;overflow:hidden;padding:28px}
+/* Başlık ve alt metin ürün görselinin üstünde dursun (görsel absolute, aksi
+   halde sonradan boyanıp yazıyı örtüyor). */
+/* ——— Kart hareketleri ———
+   .js-motion yalnızca bileşen mount olunca ekleniyor; JS çalışmazsa hiçbir
+   kart gizlenmez. Görünür olunca gruba .in gelir, sıralı animasyon başlar.
+   Animasyon bitince eleman .done alır ve animation kapanır — aksi halde
+   animation-fill-mode transform'u kilitler ve hover hiç çalışmaz.
+   Perspektif transform fonksiyonu içinde: sarmalayıcı gerekmiyor, mevcut
+   flex/grid düzeni ve z-index'ler olduğu gibi kalıyor. */
+.js-motion .f-badges .f-pill,
+.js-motion .f-values article,
+.js-motion .f-product-grid article,
+.js-motion .f-life > div article { opacity:0 }
+
+.js-motion .f-badges.in .f-pill { animation:f-pop .52s cubic-bezier(.22,.9,.28,1.45) both }
+.js-motion .f-badges.in .f-pill:nth-child(2){ animation-delay:90ms }
+.js-motion .f-badges.in .f-pill:nth-child(3){ animation-delay:180ms }
+@keyframes f-pop{
+  from{opacity:0;transform:perspective(700px) scale(.5) rotate(0deg) translateY(-14px)}
+  55%{opacity:1}
+  to{opacity:1;transform:perspective(700px) scale(1) rotate(var(--r)) translateY(0)}
+}
+
+.js-motion .f-values.in article { animation:f-card-in .66s cubic-bezier(.2,.8,.28,1.15) both }
+.js-motion .f-values.in article:nth-child(2){ animation-delay:130ms }
+.js-motion .f-values.in article:nth-child(3){ animation-delay:260ms }
+.js-motion .f-product-grid.in article { animation:f-card-in .66s cubic-bezier(.2,.8,.28,1.15) both }
+.js-motion .f-product-grid.in article:nth-child(2){ animation-delay:120ms }
+.js-motion .f-product-grid.in article:nth-child(3){ animation-delay:240ms }
+.js-motion .f-life > div.in article { animation:f-card-in .62s cubic-bezier(.2,.8,.28,1.15) both }
+.js-motion .f-life > div.in article:nth-child(2){ animation-delay:100ms }
+.js-motion .f-life > div.in article:nth-child(3){ animation-delay:200ms }
+.js-motion .f-life > div.in article:nth-child(4){ animation-delay:300ms }
+@keyframes f-card-in{
+  from{opacity:0;transform:perspective(900px) translate3d(0,54px,-140px) rotateX(18deg) rotate(0deg)}
+  50%{opacity:1}
+  to{opacity:1;transform:perspective(900px) translate3d(0,0,0) rotateX(0deg) rotate(var(--r))}
+}
+
+/* Animasyon bittikten sonra hover devralır.
+   Seçiciler bilerek .in kuralları kadar spesifik: daha kısa yazılırsa
+   animasyonu açan kural kazanıyor, fill-mode transform'u kilitli tutuyor
+   ve hover'ın transform'u hiç uygulanmıyor (gölge geliyor, hareket gelmiyor).
+   opacity:1 şart: animation:none deyince fill-mode'un tuttuğu son kare
+   düşüyor ve eleman statik opacity:0'a dönüp görünmez oluyor. */
+.js-motion .f-badges.in .f-pill.done,
+.js-motion .f-values.in article.done,
+.js-motion .f-product-grid.in article.done,
+.js-motion .f-life > div.in article.done { animation:none; opacity:1 }
+
+.f-life article { transition:transform .22s ease, box-shadow .22s ease }
+.f-life article.done:hover { transform:translateY(-10px); box-shadow:0 20px 34px rgb(23 59 41 / .18) }
+.f-life article.done:hover img { transform:scale(1.07) }
+.f-pill, .f-values article { transition:transform .2s ease, box-shadow .2s ease }
+.f-badges .f-pill.done:hover { transform:rotate(0deg) translateY(-4px) scale(1.07); box-shadow:0 10px 18px rgb(23 59 41 / .18) }
+.f-values article.done:hover { transform:rotate(calc(var(--r) * .35)) translateY(-8px) scale(1.02); box-shadow:0 16px 30px rgb(23 59 41 / .18) }
+
+/* --r tanımlı olmalı: keyframe'in son karesi rotate(var(--r)) kullanıyor,
+   tanımsız kalırsa transform tamamen geçersiz sayılıyor. */
+.f-product-grid article { --r:0deg; transition:transform .22s ease, box-shadow .22s ease }
+.f-product-grid article.done:hover { transform:translateY(-10px); box-shadow:0 20px 34px rgb(23 59 41 / .16) }
+.f-product-grid img { transition:transform .35s ease }
+.f-product-grid article.done:hover img { transform:scale(1.06) }
+
+@media (prefers-reduced-motion: reduce){
+  .js-motion .f-badges .f-pill,
+  .js-motion .f-values article,
+  .js-motion .f-product-grid article { opacity:1; animation:none }
+}
+
+.f-product-grid h3{position:relative;z-index:2;font-size:30px}.f-product-grid p{position:relative;z-index:2;font-size:20px;margin-top:4px}.f-product-grid img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.f-product-grid button{position:absolute;z-index:2;left:28px;bottom:22px;width:145px;height:52px;border:0;border-radius:26px;background:#ff7192;color:#173b29;font-weight:700;font-size:18px}.f-product-grid article:nth-child(2) button{background:#d6ff46}.f-product-grid article:nth-child(3) button{background:#fff9ee}
+/* Sepet sahnesi %85'e indirildi. Kol ile sepet AYNI görselde (kol sepetin
+   sapını tutuyor), o yüzden middle-layer da birlikte ölçeklenmek zorunda —
+   tek başına sepeti küçültmek eli saptan koparırdı.
+   Ölçek merkezi: yatayda x=-5 (sol kenarın kendisi) → öndeki el kenardan
+   taşımaya devam eder; dikeyde y=3152 (sepetin görsel merkezi).
+   Eski: middle -5/1398/1450x2319, halka 57/2558/873, ön el -5/2558/1374x2197 */
+/* Sepetli kol SAĞA hizalı (yeni yüksek kaliteli varlık, siyah zemin
+   anahtarlanıp 2x'e çıkarıldı). Ölçek 0.58: sepet varlıkta x221..1830
+   (1609px) → tuvalde ~933px, yani önceki boyutuyla aynı.
+   Sol 300 seçildi ki kolun sağ ucu (varlıkta x1983) tuvalin sağ
+   kenarından taşsın, kesik bilek görünmesin. */
+.f-middle-layer{z-index:8;left:-5px;top:1398px;width:1450px;height:2319px;object-fit:cover}
+.f-bundle{position:absolute;z-index:4;left:48px;top:2160px;width:1344px;height:425px;border-radius:40px;background:#173b29;color:#fff9ee;padding:82px 64px}.f-bundle h2{font-size:55px}.f-bundle p{font-size:20px;margin:18px 0 50px 3px}.f-bundle button{border:0;margin-left:3px}
+
+
+
+.f-bundle-circle{z-index:5;left:859px;top:2240px;width:442px;height:442px}.f-basket-circle{z-index:5;left:57px;top:2558px;width:873px;height:873px}.f-bottom-layer{z-index:9;left:-5px;top:2558px;width:1374px;height:2197px;object-fit:cover}
+
+/* Sepet sahnesi — hero'yla aynı kurgu: kaydırmayla 3D giriş, sonra salınım.
+   Burada sarmalayıcı yok; perspektif transform'un içinde perspective()
+   fonksiyonuyla veriliyor, böylece mevcut z-index düzeni hiç bozulmuyor.
+   Yerleşince .settled devreye giriyor: CSS animasyonu satır içi transform'u
+   ezer (animasyonlar cascade'de inline stilin üstündedir), o yüzden JS'in
+   yazdığı değeri temizlemeye gerek yok. */
+/* Sepetli kol (.f-middle-layer) bilerek burada yok: sabit duruyor,
+   ne giriş animasyonu ne salınım alıyor. */
+.f-basket-circle, .f-bottom-layer { opacity:0; will-change:transform,opacity }
+.f-bottom-layer { transform-origin:50% 30% }
+.f-bottom-layer.settled { animation:f-basket-float 6.2s ease-in-out infinite }
+.f-basket-circle.settled { animation:f-basket-ring 7.4s ease-in-out infinite }
+@keyframes f-basket-float{ 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-9px) rotate(.45deg)} }
+@keyframes f-basket-ring{ 0%,100%{transform:scale(1) rotate(0deg)} 50%{transform:scale(1.015) rotate(-.8deg)} }
+@media (prefers-reduced-motion: reduce){
+  .f-bottom-layer.settled, .f-basket-circle.settled { animation:none }
+}
+.f-life{position:absolute;z-index:12;left:110px;top:3654px;width:1205px}.f-life h2{font-size:55px}.f-life>a{display:block;margin-top:10px;color:#15804c;text-decoration:none;font-size:20px;font-weight:700}.f-life>div{display:grid;grid-template-columns:repeat(4,275px);gap:35px;margin-top:58px}/* Tarayıcı penceresi görünümü: üstte üç noktalı başlık çubuğu, altında
+   fotoğraf. Gövde 3:4 — fotoğrafların dördü de bu orana yakın (0.75/0.80),
+   böylece kırpılmadan tam oturuyorlar.
+   --r:0deg keyframe'in son karesi rotate(var(--r)) kullandığı için şart. */
+.f-life article{--r:0deg;position:relative;border-radius:16px;overflow:hidden;box-shadow:0 8px 22px rgb(23 59 41 / .12)}
+.f-life article header{height:34px;display:flex;align-items:center;gap:10px;padding:0 12px;font:700 12px var(--font-poppins), sans-serif;color:#173b29;white-space:nowrap;overflow:hidden}
+/* Üç nokta tek elemanda: üç radial-gradient, fazladan işaretleme yok. */
+.f-life article header::before{
+  content:"";flex:none;width:46px;height:10px;
+  background:
+    radial-gradient(circle 5px at 5px 5px,#ff5f57 98%,transparent) 0 0/16px 10px no-repeat,
+    radial-gradient(circle 5px at 5px 5px,#febc2e 98%,transparent) 16px 0/16px 10px no-repeat,
+    radial-gradient(circle 5px at 5px 5px,#28c840 98%,transparent) 32px 0/16px 10px no-repeat;
+}
+.f-life article img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .4s ease}.f-life article:nth-child(1) header{background:#ff7192}.f-life article:nth-child(2) header{background:#c9f7d3}.f-life article:nth-child(3) header{background:#ffd84a}.f-life article:nth-child(4) header{background:#b9a1ff}
+.fropie-canvas footer{position:absolute;z-index:12;left:110px;top:4300px;width:1220px}
+.f-foot-top{display:flex;justify-content:space-between;align-items:baseline}
+.fropie-canvas footer strong{font:700 28px var(--font-poppins), sans-serif}
+.fropie-canvas footer span{font-size:20px}
+
+/* Sticker kartlar. Üç ayrı dönüşüm katmanı var, çünkü animation fill-mode
+   transform'u kilitler ve tek elemanda üçü çakışır:
+     .f-foot-chip  → sürükleme / dağıtma konumu (JS yazar)
+     .f-foot-drop  → dökülme animasyonu
+     .f-foot-link  → hover kalkması                                        */
+.f-foot-stickers{position:relative;display:flex;flex-wrap:wrap;gap:18px;margin-top:38px}
+.f-foot-chip{position:relative;display:inline-block;cursor:grab;touch-action:none;user-select:none;will-change:transform;perspective:800px}
+.f-foot-chip.is-dragging{cursor:grabbing}
+.f-foot-chip.is-dragging .f-foot-link{box-shadow:0 18px 30px rgb(23 59 41 / .26);transform:scale(1.07)}
+.f-foot-drop{display:inline-block;opacity:0;will-change:transform;transform:translate3d(var(--dx),-300px,300px) rotateX(-80deg) rotateY(var(--ry)) rotateZ(var(--rz0))}
+.f-foot-stickers.in .f-foot-drop{animation:f-drop-3d .95s cubic-bezier(.2,.68,.32,1) both;animation-delay:var(--d)}
+/* Yukarıdan dökülme: kart uzaktan/yukarıdan gelir, yüzü döne döne yatar,
+   yere çarpıp hafif sekerek kendi açısına oturur. */
+@keyframes f-drop-3d{
+  0%{opacity:0;transform:translate3d(var(--dx),-300px,300px) rotateX(-80deg) rotateY(var(--ry)) rotateZ(var(--rz0)) scale(1.14)}
+  35%{opacity:1}
+  62%{transform:translate3d(calc(var(--dx) * .12),16px,10px) rotateX(16deg) rotateY(calc(var(--ry) * .18)) rotateZ(calc(var(--r) * 1.5)) scale(.97)}
+  80%{transform:translate3d(0,-9px,0) rotateX(-7deg) rotateY(0deg) rotateZ(calc(var(--r) * .8)) scale(1.02)}
+  92%{transform:translate3d(0,3px,0) rotateX(3deg) rotateZ(calc(var(--r) * 1.08)) scale(.995)}
+  100%{opacity:1;transform:translate3d(0,0,0) rotateX(0deg) rotateY(0deg) rotateZ(var(--r)) scale(1)}
+}
+.f-foot-link{display:inline-flex;align-items:center;height:52px;padding:0 26px;border-radius:20px;color:#173b29;font:700 15px var(--font-poppins), sans-serif;text-decoration:none;white-space:nowrap;transition:transform .18s ease, box-shadow .18s ease}
+.f-foot-link:hover{transform:translateY(-6px) scale(1.05);box-shadow:0 12px 22px rgb(23 59 41 / .2)}
+.f-foot-link:active{transform:translateY(-1px) scale(.99);box-shadow:0 4px 10px rgb(23 59 41 / .18)}
+.f-foot-link.lime{background:#d6ff46}.f-foot-link.yellow{background:#ffd84a}.f-foot-link.pink{background:#ff7192}.f-foot-link.purple{background:#b9a1ff}.f-foot-link.mint{background:#c9f7d3}
+/* z-index: dağılan kartlar düğmelerin üstüne gelip tıklanamaz yapmasın. */
+.f-foot-controls{position:relative;z-index:999;display:flex;align-items:center;gap:14px;margin-top:30px}
+.f-foot-controls button{height:44px;padding:0 24px;border:2px solid #173b29;border-radius:22px;background:#fff9ee;color:#173b29;font:700 14px var(--font-poppins), sans-serif;cursor:pointer;transition:transform .16s ease, background .16s ease}
+.f-foot-controls button:hover:not(:disabled){transform:translateY(-3px);background:#d6ff46}
+.f-foot-controls button:disabled{opacity:.4;cursor:default}
+.f-foot-hint{font-size:14px;opacity:.6}
+
+.f-foot-bottom{display:flex;justify-content:space-between;margin-top:38px;padding-top:22px;border-top:1px solid rgb(23 59 41 / .16)}
+.f-foot-bottom span{font-size:15px;opacity:.7}
+
+/* Hareketi azalt: kartlar dökülmez, oldukları yerde belirir. Sürükleme çalışır. */
+@media (prefers-reduced-motion: reduce){
+  .f-foot-drop{opacity:1;transform:none}
+  .f-foot-stickers.in .f-foot-drop{animation:none;transform:rotate(var(--r))}
+}
